@@ -2,19 +2,16 @@ import Logo from "../../assets/tuneup-logo-light.png";
 import LogoDark from "../../assets/tuneup-logo-dark.png";
 import { FaQuestion } from "react-icons/fa6";
 import CustomSearch from "../custom-search";
-import {
-  Box,
-  Burger,
-  Flex,
-  Image,
-  useComputedColorScheme,
-} from "@mantine/core";
+import { Flex, Image, useComputedColorScheme, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { LiaLaptopCodeSolid } from "react-icons/lia";
+import { RiMenuUnfoldFill } from "react-icons/ri";
 import Theme from "../theme/theme";
+import UserCard from "../user-card/user-crad";
 
 const Navbar = () => {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { open, close }] = useDisclosure(false);
+
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
   });
@@ -31,19 +28,9 @@ const Navbar = () => {
         m="auto"
       >
         <Flex align="center" gap="lg" p="md" w="40%">
-          <Box>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              aria-label="Toggle navigation"
-            />
-          </Box>
-          <Box>
-            <LiaLaptopCodeSolid size={33} />
-          </Box>
-          <Box>
-            <FaQuestion size={25} />
-          </Box>
+          <RiMenuUnfoldFill size={30} cursor="pointer" onClick={open} />
+          <LiaLaptopCodeSolid size={33} />
+          <FaQuestion size={25} />
         </Flex>
         <Flex align="center" h="30" w="10%" mr="xl">
           {computedColorScheme === "light" && (
@@ -60,6 +47,17 @@ const Navbar = () => {
           <Theme />
         </Flex>
       </Flex>
+
+      {/* Side drawer */}
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        title=""
+        overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
+      >
+        <UserCard />
+      </Drawer>
       <hr />
     </>
   );
