@@ -1,12 +1,14 @@
 import "./App.css";
 import RoutesConfig from "./routes/routes-config";
 import Navbar from "./components/navbar-layout/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ maxWidth: "100%" }}>
       <Navbar />
       <RoutesConfig />
+      <Footer />
     </div>
   );
 }

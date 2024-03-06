@@ -1,37 +1,67 @@
-import Logo from "../../assets/tuneup-logo.png";
-import { AiOutlineMenu } from "react-icons/ai";
-import { FaCodepen } from "react-icons/fa";
+import Logo from "../../assets/tuneup-logo-light.png";
+import LogoDark from "../../assets/tuneup-logo-dark.png";
 import { FaQuestion } from "react-icons/fa6";
 import CustomSearch from "../custom-search";
-import { Link } from "react-router-dom";
-import { Button, Container, Flex } from "@mantine/core";
+import {
+  Box,
+  Burger,
+  Flex,
+  Image,
+  useComputedColorScheme,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { LiaLaptopCodeSolid } from "react-icons/lia";
+import Theme from "../theme/theme";
 
 const Navbar = () => {
+  const [opened, { toggle }] = useDisclosure();
+  const computedColorScheme = useComputedColorScheme("light", {
+    getInitialValueInEffect: true,
+  });
+
   return (
-    <Flex h="50px" w="100%" p="md" justify="center" gap="20px" mb="xl" m="auto">
-      <Container>
-        <img src={Logo} height={120} width={120} />
-      </Container>
-      <Container ml="lg">
-        <CustomSearch />
-      </Container>
-      <Flex gap="xl" align="center" justify="center" m="auto">
-        <Link to="/" style={{ color: "#4A4D45", fontSize: 17 }}>
-          Courses
-        </Link>
-        <Link to="/" style={{ color: "#4A4D45", fontSize: 17 }}>
-          About
-        </Link>
-        <Link to="/" style={{ color: "#4A4D45", fontSize: 17 }}>
-          Page
-        </Link>
+    <>
+      <Flex
+        h="40px"
+        w="100%"
+        p="md"
+        justify="space-between"
+        gap="20px"
+        mb="xl"
+        m="auto"
+      >
+        <Flex align="center" gap="lg" p="md" w="40%">
+          <Box>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              aria-label="Toggle navigation"
+            />
+          </Box>
+          <Box>
+            <LiaLaptopCodeSolid size={33} />
+          </Box>
+          <Box>
+            <FaQuestion size={25} />
+          </Box>
+        </Flex>
+        <Flex align="center" h="30" w="10%" mr="xl">
+          {computedColorScheme === "light" && (
+            <Image src={Logo} height={120} width={120} />
+          )}
+          {computedColorScheme === "dark" && (
+            <Image src={LogoDark} height={120} width={120} />
+          )}
+        </Flex>
+        <Flex justify="center" w="25%" ml="xl">
+          <CustomSearch />
+        </Flex>
+        <Flex justify="flex-end">
+          <Theme />
+        </Flex>
       </Flex>
-      <Container>
-        <Button variant="outline" color="gray" size="sm" radius="xl">
-          Sign Up
-        </Button>
-      </Container>
-    </Flex>
+      <hr />
+    </>
   );
 };
 

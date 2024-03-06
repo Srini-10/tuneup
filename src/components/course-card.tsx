@@ -1,38 +1,93 @@
-import React from "react";
-import Html from "../assets/html.svg";
-import { CiBookmark } from "react-icons/ci";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Image,
+  Rating,
+  Text,
+  Title,
+} from "@mantine/core";
+import CourseImage from "../assets/course-class.jpg";
+import Timer from "../assets/timer.svg";
+import Video from "../assets/video.svg";
+import Download from "../assets/download-icon.svg";
 
 type Props = {
   title: string;
-  price: number;
-  start: string;
-  rating: string;
+  desc: string;
+  price: string;
+  duration: string;
+  rating: number;
+  videos: number;
+  download: number;
 };
 
-const CourseCard = ({ title, price, start, rating }: Props) => {
+const CourseCard = ({
+  title,
+  desc,
+  price,
+  duration,
+  rating,
+  videos,
+  download,
+}: Props) => {
   return (
-    <div className="flex items-center  w-[40%] h-36 rounded-md p-5 mt-10 border border-blue-30 relative">
-      <div className="absolute top-5 right-5">
-        <CiBookmark size={25} />
-      </div>
-      <div className="w-[20%]">
-        <img src={Html} className="h-full w-28 rounded-sm" />
-      </div>
-      <div className="w-[80%]">
-        <p className="font-bold text-black text-xl mb-4">{title}</p>
-        <div className="flex justify-center items-center gap-2">
-          <div className="bg-gray-100 rounded-md w-36 h-10 flex items-center justify-center font-500 text-xs font-semibold">
-            ₹ Price: {price}
-          </div>
-          <div className="bg-gray-100 rounded-md w-36 h-10 flex items-center justify-center text-xs font-semibold">
-            Start: {start}
-          </div>
-          <div className="bg-gray-100 rounded-md w-36 h-10 flex items-center justify-center text-xs font-semibold">
-            ☆ Rating: {rating}
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Box
+        h="450px"
+        w="350px"
+        bg="#FFFFFF"
+        style={{
+          borderRadius: "10px",
+          boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+        }}
+      >
+        <Box p="md">
+          <Image src={CourseImage} />
+        </Box>
+        <Flex justify="space-between" p="md">
+          <Text c="#ACACAC" fz="md" fw="bold">
+            {title}
+          </Text>
+          <Rating defaultValue={rating} size="xs" />
+        </Flex>
+        <Box ta="left" p="md">
+          <Title order={2}>{desc}</Title>
+          <Title order={4} c="#60a5fa">
+            {price}
+          </Title>
+        </Box>
+        <Flex justify="center">
+          <Divider w="95%" variant="dashed" />
+        </Flex>
+        <Flex p="md" justify="center" gap="xl">
+          <Flex gap="md" justify="center" align="center">
+            <img src={Timer} alt="" />
+            <Text fz="sm" c="#ACACAC">
+              {duration}
+            </Text>
+          </Flex>
+          <Flex gap="md" justify="center" align="center">
+            <img src={Video} alt="" />
+            <Text fz="md" c="#ACACAC">
+              {videos} Videos
+            </Text>
+          </Flex>
+          <Flex gap="md" justify="center" align="center">
+            <img src={Download} alt="" />
+            <Text fz="md" c="#ACACAC">
+              {download} Sales
+            </Text>
+          </Flex>
+        </Flex>
+        <Box>
+          <Button variant="filled" color="#60a5fa" radius="xl">
+            Join Course
+          </Button>
+        </Box>
+      </Box>
+    </>
   );
 };
 

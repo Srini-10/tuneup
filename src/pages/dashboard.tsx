@@ -1,22 +1,22 @@
-import { Box, Image, Title } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import Advertisement from "../components/advertisement";
-import BannerLogo from "../assets/banner.svg";
-import CustomCarousel from "../components/carousel";
+import CoursesTab from "../components/courses-tab";
+import RoadmapTab from "../components/roadmap-tab";
+import VisionMission from "../components/vision-mission";
+import Certification from "../components/certification";
 
 type Props = {};
 
 const Dashboard = (props: Props) => {
   return (
     <>
-      <Advertisement />
-      <Box mt="xl">
-        <Image src={BannerLogo} />
-      </Box>
-      <Box>
-        <Title order={1} ta="center" mt="md">
-          Explore Our Online Courses
-        </Title>
-      </Box>
+      <Flex mt="xl" direction="column" gap="xl">
+        <Advertisement />
+        <CoursesTab />
+        <VisionMission />
+        <RoadmapTab />
+        <Certification />
+      </Flex>
     </>
   );
 };
