@@ -4,6 +4,8 @@ import {
   Divider,
   Flex,
   Image,
+  Input,
+  Modal,
   Rating,
   Text,
   Title,
@@ -81,6 +83,7 @@ const CourseCard = ({
             </Text>
           </Flex>
         </Flex>
+
         <Box>
           <Button variant="filled" color="#60a5fa" radius="xl">
             Join Course
