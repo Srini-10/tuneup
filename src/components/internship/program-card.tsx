@@ -9,6 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import RegisterForm from "./register-form";
 
 type Props = {
   imageSrc: any;
@@ -49,19 +50,7 @@ const ProgramCard = ({ imageSrc, title, content }: Props) => {
           <Title order={4} ta="center" mb="md">
             Register
           </Title>
-          <Input.Label>Name</Input.Label>
-          <Input name="Name" mb="md" />
-          <Input.Label>Email</Input.Label>
-          <Input name="Email" mb="md" />
-          <Input.Label>Mobile Number</Input.Label>
-          <Input name="Mobile Number" mb="md" />
-          <Input.Label>College name</Input.Label>
-          <Input name=">College name" mb="md" />
-          <Input.Label>Overall CGPA</Input.Label>
-          <Input name=">Overall CGPA" mb="md" />
-          <Flex justify="center" m="auto" mt="xl">
-            <Button onClick={open}>Register</Button>
-          </Flex>
+          <RegisterForm closeModal={close} />
         </Flex>
       </Modal>
       <Flex justify="center" m="auto" mt="xl">

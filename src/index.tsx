@@ -7,6 +7,8 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import { BrowserRouter } from "react-router-dom";
 import "@mantine/carousel/styles.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const theme = createTheme({
   breakpoints: {
@@ -30,6 +32,7 @@ root.render(
         <App />
       </MantineProvider>
     </BrowserRouter>
+    <ToastContainer autoClose={5000} position="top-right" />
   </React.StrictMode>
 );
 
