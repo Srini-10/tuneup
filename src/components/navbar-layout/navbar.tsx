@@ -8,6 +8,7 @@ import { LiaLaptopCodeSolid } from "react-icons/lia";
 import { RiMenuUnfoldFill } from "react-icons/ri";
 import Theme from "../theme/theme";
 import UserCard from "../user-card/user-crad";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -29,7 +30,9 @@ const Navbar = () => {
       >
         <Flex align="center" gap="lg" p="md" w="40%">
           <RiMenuUnfoldFill size={30} cursor="pointer" onClick={open} />
-          <LiaLaptopCodeSolid size={33} />
+          <Link to="/internship">
+            <LiaLaptopCodeSolid size={33} />
+          </Link>
           <FaQuestion size={25} />
         </Flex>
         <Flex align="center" h="30" w="10%" mr="xl">
