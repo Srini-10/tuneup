@@ -22,26 +22,26 @@ const Heroes = (props: Props) => {
         <Flex justify="center" m="auto" mt="xl">
           <HeroesCard
             imageSrc={avatar}
-            name="Marvin McKinney"
-            role="Co-op & Internships Program & Operations Manager"
+            name="Sairam Senthil"
+            role="Founder & MySQL Trainer"
             experience="Former co-founder of Opendoor. Early staff at Spotify and Clearbit."
           />
           <HeroesCard
             imageSrc={avatar}
-            name="Marvin McKinney"
-            role="Co-op & Internships Program & Operations Manager"
+            name="Pradeep Muthu"
+            role="CEO & Technical Trainer"
             experience="Former co-founder of Opendoor. Early staff at Spotify and Clearbit."
           />
           <HeroesCard
             imageSrc={avatar}
-            name="Marvin McKinney"
-            role="Co-op & Internships Program & Operations Manager"
+            name="Monishwaran K"
+            role="Technical Trainer & Software Developer"
             experience="Former co-founder of Opendoor. Early staff at Spotify and Clearbit."
           />
           <HeroesCard
             imageSrc={avatar}
-            name="Marvin McKinney"
-            role="Co-op & Internships Program & Operations Manager"
+            name="Srinivasan P"
+            role="Technical Trainer & Frontend Developer"
             experience="Former co-founder of Opendoor. Early staff at Spotify and Clearbit."
           />
         </Flex>

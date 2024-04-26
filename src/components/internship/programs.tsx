@@ -1,13 +1,26 @@
-import { Box, Flex, Text, Title } from "@mantine/core";
 import React from "react";
+import { Box, Text, Title } from "@mantine/core"; // Import necessary components
+import { Carousel } from "@mantine/carousel"; // Import Carousel component
+import { useMantineTheme } from "@mantine/core"; // Import useMantineTheme hook
+import { useMediaQuery } from "@mantine/hooks"; // Import useMediaQuery hook
 import ProgramCard from "./program-card";
+import DigitalMarketing from "../../assets/Digital Marketing.jpg"; // Update import paths
+import WebDevelopment from "../../assets/WebDevelopment.jpg"; // Update import paths
+import Python from "../../assets/python.png";
+import Mysql from "../../assets/mysql.png";
+import AppDevelopment from "../../assets/AppDevelopment.jpg";
+import { IconArrowRight, IconArrowLeft } from "@tabler/icons-react";
+import classes from "./Demo.module.css";
 
 type Props = {};
 
 const Programs = (props: Props) => {
+  const theme = useMantineTheme(); // Use useMantineTheme hook inside the component
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`); // Use useMediaQuery hook inside the component
+
   return (
     <>
-      <Box ta="left" p="xl" ml="xl">
+      <Box p="xl" m="auto" w="96%">
         <Text c="#60a5fa" size="md" fw={600}>
           Explore Programs
         </Text>
@@ -18,28 +31,63 @@ const Programs = (props: Props) => {
           Let's join our famous class, the knowledge provided will definitely be
           useful for you.
         </Text>
-        <Flex gap="xl" align="center" justify="center">
-          <ProgramCard
-            imageSrc="https://s3-alpha-sig.figma.com/img/a05b/9903/ed4c738aeb667522e57e8df1f6bac2ee?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=C9Xa9JZM1gP3DTEYZrZrBX1-Y-v297sKI71mjP0G5-PcfgPguX9DmPMnAzx9CJ4pqaBc7WxUAB4dAmrAxXtJlj0AZ6CAwmROQA2pxFmcEXNbAZ2xGjGjLJRTR6stFhygOEZTFa8IomrOGfc10d920Dvtc9VtV-fCHuAKGqCaD3KpIQI4H3fY5V~BY7L4CFhh1SX9Jz63bAuxGjA4Q6xgo5avNTKiOjMSIDZH54mVsfQKMQ2EBXqaYjY9lWpXae5GBZ9ZwjfDy3dJc6cAiBHoXNnoAFWXjFk~oVL4EhwWFyfrmP3lVucyfz2u9IXhgb33dueK5X6AZD1PkuPFqAn3qA__"
-            title="Figma UI UX Design"
-            content="Use Figma to get a job in UI Design, User Interface, User Experience design."
-          />
-          <ProgramCard
-            imageSrc="https://s3-alpha-sig.figma.com/img/4c14/8515/0cd487c9c36d0c807b81298265d4ce93?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UBWQpsTiwPKUBvrtYsaOqWeFGPAD69Hs4-CVYGHT3ttB9P2K9AnD1~52EfPGKVQR9UPHRjEoRQrLsjAkrLUebn-wTNjSHMBPeObRpX3--IBPETvf1d1wkkz0VibO2R25fYtyB3sJo1mSqS-4R2edW09bc1T1qCuKACb3q9iTbIswv2nrRFOwc86~WGTEOPT52UJWHqGEjOKKIz9bnFnqK0fG-W2tGs7~MBrtiXaJPuhlKRpwNVQx0n-4Cfo~acW6Yauggd~PTlW17LChqcOhzoKWTSGf3L0nXfcvYj4l8cDqOpnb-5Q5GBJFSR5Kwu53722l2gK5tqMsCZhkGsed6Q__"
-            title="Learn With Shoaib"
-            content="Use Figma to get a job in UI Design, User Interface, User Experience design."
-          />
-          <ProgramCard
-            imageSrc="https://s3-alpha-sig.figma.com/img/93a5/e429/5f57ac056d170d1388028aa90dc75b6a?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=egzCyw1T07hY9hpL1xGfQYlUwnBsMLtucUzlbes2opVcNBL5rPkIeI3UK9hrslDreDpbuqfVsSvf7H1rfAaaxjsMKcgD4WXb5uX-MDO8HPFk-ywkkI44dxx3lN2P1W6H5G7bhFUzzbZgVA0njiUloWRdL89x~4kYta9HcF7rAicGM-ixDL6tjGz-WhIiLd5B~NHAPwdee8Er6cBmRa~RRzqmEijt6a~dQ5Kmn1ZAfyhblRdBCwQyNqZRvaQspZ263C3AtW8VH4V8TipSGBkM5aK0X5jAHYJmbGyTICUabFd3e3G5B8a5U7FVbYqfFoEoaMK4h3psdDpBMlDmM97YuQ__"
-            title="Building User Interface.."
-            content="Use Figma to get a job in UI Design, User Interface, User Experience design."
-          />
-          <ProgramCard
-            imageSrc="https://s3-alpha-sig.figma.com/img/93a5/e429/5f57ac056d170d1388028aa90dc75b6a?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=egzCyw1T07hY9hpL1xGfQYlUwnBsMLtucUzlbes2opVcNBL5rPkIeI3UK9hrslDreDpbuqfVsSvf7H1rfAaaxjsMKcgD4WXb5uX-MDO8HPFk-ywkkI44dxx3lN2P1W6H5G7bhFUzzbZgVA0njiUloWRdL89x~4kYta9HcF7rAicGM-ixDL6tjGz-WhIiLd5B~NHAPwdee8Er6cBmRa~RRzqmEijt6a~dQ5Kmn1ZAfyhblRdBCwQyNqZRvaQspZ263C3AtW8VH4V8TipSGBkM5aK0X5jAHYJmbGyTICUabFd3e3G5B8a5U7FVbYqfFoEoaMK4h3psdDpBMlDmM97YuQ__"
-            title="Building User Interface.."
-            content="Use Figma to get a job in UI Design, User Interface, User Experience design."
-          />
-        </Flex>
+        <Carousel
+          height={430}
+          w="100%"
+          align="center"
+          loop
+          classNames={classes}
+          slidesToScroll={mobile ? 1 : 1}
+          slideSize={{ base: "20%", md: "50%", sm: "50%", lg: "10%" }}
+          slideGap={{ base: "lg", sm: 10, md: 20, lg: 30 }}
+          nextControlIcon={
+            <IconArrowRight style={{ width: "16", height: "16" }} />
+          }
+          previousControlIcon={
+            <IconArrowLeft style={{ width: "16", height: "16" }} />
+          }
+        >
+          <Carousel.Slide style={{ marginLeft: "10px" }}>
+            <ProgramCard
+              imageSrc={WebDevelopment}
+              duration="45Days (67Hrs)"
+              title="Frontend Development"
+              content="Frontend web development involves creating the visible and interactive aspects of websites."
+            />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <ProgramCard
+              imageSrc={AppDevelopment}
+              duration="45Days (67Hrs)"
+              title="Application Developer"
+              content="Application development involves designing, building, and maintaining software applications for various platforms."
+            />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <ProgramCard
+              imageSrc={Python}
+              duration="45Days (67Hrs)"
+              title="Python Programming"
+              content="Python is a high-level, interpreted programming language known for its simplicity, versatility, and readability."
+            />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <ProgramCard
+              imageSrc={Mysql}
+              duration="45Days (67Hrs)"
+              title="MySQL Database"
+              content="It is an open-source relational database management system used for storing, organizing, and retrieving data efficiently."
+            />
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <ProgramCard
+              imageSrc={DigitalMarketing}
+              duration="45Days (67Hrs)"
+              title="Digital Marketing"
+              content="Digital marketing encompasses all online strategies and tactics used to promote products or services."
+            />
+          </Carousel.Slide>
+        </Carousel>
       </Box>
     </>
   );
