@@ -30,7 +30,7 @@ const GetStartText = (props: Props) => {
       </Text>
       <Flex gap="md" mt="xl" mb="md">
         <Button>Get Started</Button>
-        <Button variant="outline">Get free trail</Button>
+        <Button variant="outline">Register Now</Button>
       </Flex>
       <Image src={getStartLabel} mt={50} />
     </Box>

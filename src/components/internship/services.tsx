@@ -17,20 +17,22 @@ const Services = (props: Props) => {
         </Title>
         <Flex w="95%" justify="center" align="center" gap="md" m="auto" p="md">
           <ServiceCard
-            title="Interaction Design"
-            content="Lessons on design that cover the most recent developments."
+            title="Frontend Development"
+            content="Frontend web development involves creating the visible and interactive aspects of websites."
           />
           <ServiceCard
-            title="UX Design Course"
-            content="Classes in development that cover the most recent advancements in web."
+            title="Application Development"
+            content="
+            Application development involves designing, building, and maintaining software applications for various platforms."
           />
           <ServiceCard
-            title="User Interface Design"
-            content="User Interface Design courses that cover the most recent  trends"
+            title="MySQL Database"
+            content="
+            It is an open-source relational database management system used for storing, organizing, and retrieving data efficiently."
           />
           <ServiceCard
-            title="User Interface Design"
-            content="User Interface Design courses that cover the most recent  trends"
+            title="Digital Marketing"
+            content="Digital marketing encompasses all online strategies and tactics used to promote products or services."
           />
         </Flex>
       </Box>

@@ -5,8 +5,8 @@ import twitter from "../../assets/twitter.svg";
 type Props = {
   imageSrc: any;
   name: string;
-  role: string;
-  experience: string;
+  role: string;               
+  experience: string;                                     
 };
 
 const HeroesCard = ({ imageSrc, name, role, experience }: Props) => {
@@ -37,7 +37,7 @@ const HeroesCard = ({ imageSrc, name, role, experience }: Props) => {
           <Text fw={500} size="md" c="#667085">
             {experience}
           </Text>
-          <Flex gap="xl">
+          <Flex gap="lg">
             <Image src={twitter} />
             <Image src={linkedin} />
           </Flex>
