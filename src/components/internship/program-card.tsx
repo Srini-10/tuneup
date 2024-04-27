@@ -61,10 +61,10 @@ const ProgramCard = ({ imageSrc, title, content, duration }: Props) => {
       <Text pt={2} p={20} size="sm" ta="justify">
         {content}
       </Text>
-      <Modal opened={opened} onClose={close} centered>
-        <Flex w="60%" justify="center" direction="column" m="auto">
-          <Title order={4} ta="center" mb="md">
-            Register
+      <Modal opened={opened} onClose={close} centered size="lg">
+        <Flex justify="center" direction="column" m="auto">
+          <Title order={4} ta="center" mb="md" c="rgb(2,0,36)">
+            Introduce yourself!
           </Title>
           <RegisterForm closeModal={close} />
         </Flex>
