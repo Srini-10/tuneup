@@ -18,7 +18,7 @@ const InternNavbar = (props: Props) => {
         <Flex align="center" w="10%" mr="xl">
           <Image src={Logo} height={120} width={120} />
         </Flex>
-        <Button>Register</Button>
+        <Button>Login</Button>
       </Flex>
       <hr />
     </>
