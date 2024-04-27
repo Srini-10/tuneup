@@ -1,0 +1,130 @@
+{
+  /* <div className="mt-10">
+        <Tabs defaultValue="course-library">
+          <Tabs.List justify="center">
+            <Tabs.Tab value="course-library" w={200} fw="lighter" fz="xl">
+              Course Library
+            </Tabs.Tab>
+            <Tabs.Tab value="free-courses" w={200} fw="lighter" fz="xl">
+              Free Courses
+            </Tabs.Tab>
+            <Tabs.Tab value="webinars" w={200} fw="lighter" fz="xl">
+              Webinars
+            </Tabs.Tab>
+            <Tabs.Tab value="my-courses" w={200} fw="lighter" fz="xl">
+              My Courses
+            </Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value="first" pt="xs">
+            Gallery tab content
+          </Tabs.Panel>
+          <Tabs.Panel value="second" pt="xs">
+            Messages tab content
+          </Tabs.Panel>
+          <Tabs.Panel value="third" pt="xs">
+            Settings tab content
+          </Tabs.Panel>
+        </Tabs>
+      </div> */
+}
+
+{
+  /* <Advertisement /> */
+}
+{
+  /* <div className="mt-10">
+        <Tabs
+          color="lime"
+          variant="pills"
+          radius="xl"
+          defaultValue="course-library"
+        >
+          <Tabs.List justify="center">
+            <Tabs.Tab value="course-library" w={200} fz="xl">
+              Course Library
+            </Tabs.Tab>
+            <Tabs.Tab value="free-courses" w={200} fz="xl">
+              Free Courses
+            </Tabs.Tab>
+            <Tabs.Tab value="webinars" w={200} fz="xl">
+              Webinars
+            </Tabs.Tab>
+            <Tabs.Tab value="my-courses" w={200} fz="xl">
+              My Courses
+            </Tabs.Tab>
+          </Tabs.List>
+          <Tabs.Panel value="course-library" pt="xs">
+            <Flex justify="center" gap="md">
+              <CourseCard
+                title="Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+              <CourseCard
+                title="Python Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+            </Flex>
+          </Tabs.Panel>
+          <Tabs.Panel value="free-courses" pt="xs">
+            <Flex justify="center" gap="md">
+              <CourseCard
+                title="Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+              <CourseCard
+                title="Python Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+            </Flex>
+          </Tabs.Panel>
+          <Tabs.Panel value="webinars" pt="xs">
+            <Flex justify="center" gap="md">
+              <CourseCard
+                title="Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+              <CourseCard
+                title="Python Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+            </Flex>
+          </Tabs.Panel>
+          <Tabs.Panel value="my-courses" pt="xs">
+            <Flex justify="center" gap="md">
+              <CourseCard
+                title="Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+              <CourseCard
+                title="Python Full Stack Web Development"
+                price={100}
+                start="Jan 2024"
+                rating="4.5"
+              />
+            </Flex>
+          </Tabs.Panel>
+        </Tabs>
+      </div> */
+}
+
+
+          {/* <Image src={Student} w="40px" h="40px" pos="absolute" left={30} /> */}
+
+
+<Container mt="xl" w="100%">
+        <Image src={BannerLogo} />
+      </Container>
