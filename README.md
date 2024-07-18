@@ -1,3 +1,3 @@
-I have create our TuneUp Technologies Website using Wordpress with my team.
+I had created website for TuneUp Technologies along with my team mates using WordPress.
 
 www.tuneuptech.in
